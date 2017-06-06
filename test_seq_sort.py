@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-
-__author__  = 'télémaque'
-__version__ = '0.0.1'
-__date__    = '05 June 2017'
-
 import os
 import random
 
