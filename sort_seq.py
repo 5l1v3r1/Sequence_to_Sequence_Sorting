@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-
-__author__  = 'télémaque'
-__version__ = '0.0.1'
-__date__    = '05 June 2017'
 '''
 A sequence to sequence learning implementation for sorting a list of numbers.
 
