@@ -14,8 +14,23 @@ http://colah.github.io/posts/2015-08-Understanding-LSTMs [5]
 
 
 In my code, I use the one-hot encoding and the batch-generating methods from reference [1]. At first I was creating a large training .npz file, but I much prefer generating the training and testing data on-the-fly with batch_gen().   
-I changed the model architecture a bit, making like the one used in [2].  
+I changed the model architecture a bit, making it like the one used in [2].  
+
+Below are some screenshots of the training. The first image shows the results after only a few hundred epochs.
+![alt text](./images/01.png?raw=true "Output")  
+
+After more training, we begin to see some correct predictions.  
+![alt text](./images/02.png?raw=true "Output")  
+
+Finally, after most predictions are correct, I test the accuracy with 1,000 test trials.  
+![alt text](./images/03.png?raw=true "Output")  
 
 
-work in progress...  
-***sequence lengths and test accuracy...***
+#### Sequence Lengths and Test Accuracy  
+| Sequence Length  | Training Epochs  | Test Accuracy  |
+| -------------    |:-------------:   | ---------:     |
+| 10 chars         | 4.3x10<sup>4</sup> | 98.40 % |
+| 15 chars         | 1.0x10<sup>5</sup> | 98.40 % |
+| 20 chars         | 1.2x10<sup>5</sup> | 98.20 % |
+
+The Training Epochs values above do not necessarily reflect the minimum training iterations required to achieve the given Test Accuracies. For the length-10 sequence, for example, I trained the model for 40,000 epochs, saw that I was close to my goal of  98% accuracy, and continued training by 1,000 epochs until the desired accuracy was reached.  
