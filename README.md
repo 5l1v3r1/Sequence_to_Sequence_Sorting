@@ -34,3 +34,16 @@ Finally, after most predictions are correct, I test the accuracy with 1,000 test
 | 20 chars         | 1.2x10<sup>5</sup> | 98.20 % |
 
 The Training Epochs values above do not necessarily reflect the minimum training iterations required to achieve the given Test Accuracies. For the length-10 sequence, for example, I trained the model for 40,000 epochs, saw that I was close to my goal of  98% accuracy, and continued training by 1,000 epochs until the desired accuracy was reached.  
+
+### To Train Model  
+`$ python3 sort_seq.py --help`  
+to see options.
+
+### To Test Trained Model
+`$ python3 test_seq_sort.py --help`  
+
+### Requirements
+Python 3  
+NumPy  
+Keras  
+TensorFlow    
